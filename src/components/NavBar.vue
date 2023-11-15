@@ -1,47 +1,58 @@
 
 <template>
-    <v-card
+  <v-container>
+    <v-row>
+      <v-col>
+        <v-card
     class="mx-auto"
     max-width="448"
+    height="auto"
   >
     <v-layout>
       <v-app-bar
         density="compact"
       >
-     
+      <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
+      
         <img
       class="mx-2"
       src="../assets/adversity-athletes-logo.jpg"
       height="45"
       width="45"
         />
+      </router-link>
+     
         <v-app-bar-title>Adversity Athletes</v-app-bar-title>
 
         <!-- <template v-slot:append>
           <v-btn icon="mdi-dots-vertical"></v-btn>
         </template> -->
-          <template v-slot:append>
+          <!-- <template v-slot:append>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-          </template>
+          </template> -->
 
           <v-tabs
           color="deep-purple-accent-4"
         >
-        <router-link :to="{ name: 'About Us' }">
-          <v-tab :value="1" @click="">About Us</v-tab>
-        </router-link>
-          <v-tab :value="2">Coaches</v-tab>
-          <v-tab :value="3">Extra Tab</v-tab>
+        <!-- <router-link :to="{ name: 'About Us' }">
+        </router-link> -->
+        <v-tab :value="1" @click="">About Us</v-tab>
+        <v-tab :value="2">Coaches</v-tab>
+          <!-- <v-tab :value="3">Extra Tab</v-tab> -->
         </v-tabs>
       </v-app-bar>
 
-      <v-navigation-drawer location="end" v-model="drawer">
+      <!-- <v-navigation-drawer location="end" v-model="drawer">
         <v-list-item link title="List Item 1"></v-list-item>
         <v-list-item link title="List Item 2"></v-list-item>
        <v-list-item link title="List Item 3"></v-list-item>
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
     </v-layout>
   </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+    
 </template>
   <script>
   // import logo from '../assets/images/adversity-athletes-logo.jpg'
