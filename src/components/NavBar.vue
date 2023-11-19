@@ -22,7 +22,7 @@
 
     <v-menu v-model="dropdown"  location="bottom">
       <template v-slot:activator="{ props }">
-        <v-app-bar-nav-icon v-bind="props"  @click.stop="toggleDropdown"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon v-bind="props"  @click="toggleDropdown"></v-app-bar-nav-icon>
       </template>
 
       <v-list>
@@ -49,6 +49,9 @@
         { title: 'Be a Sponsor', path: '/sponsorship' },
       ],
     };
+  },
+  computed:{
+    
   },
   methods: {
     toggleDropdown() {
