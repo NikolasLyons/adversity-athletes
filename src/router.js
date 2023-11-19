@@ -16,6 +16,16 @@ const routes = [
     name: "About Us",
     component: loadPage("AboutUs"),
   },
+  {
+    path: "/coaches",
+    name: "Coaches",
+    component: loadPage("Coaches"),
+  },
+  {
+    path: "/sponsorship",
+    name: "Sponsors",
+    component: loadPage("Sponsors"),
+  },
 
 ];
 

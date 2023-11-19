@@ -1,12 +1,14 @@
 
 <template>
-<header>
-  <NavBar />
-</header>
-<main>
-  <router-view></router-view>
-</main>
-<footer></footer>
+  <v-app>
+  <header>
+    <NavBar />
+  </header>
+      <router-view></router-view>
+  <footer>
+    <Footer />
+  </footer>
+  </v-app>
 </template>
   <script>
   export default {
@@ -16,5 +18,6 @@
 };
   </script>
 
-<style scoped>
+<style  scoped>
+
 </style>

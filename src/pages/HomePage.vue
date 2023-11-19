@@ -1,5 +1,5 @@
 <template>
-<v-container container-fluid>
+
   <v-row class="ma-5">
     <v-col cols="6">
       <v-card align="center" height="auto" class="ma-5 flex-column align-item-center text-center">
@@ -18,7 +18,6 @@
     </v-col>
   </v-row>
   <!-- <img src="../assets/adversity-athletes-logo.jpg" alt=""> -->
-</v-container>
 </template>
 <script>
 </script>

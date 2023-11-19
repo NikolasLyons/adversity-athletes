@@ -1,18 +1,12 @@
 
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <v-card
-    class="mx-auto"
-    max-width="448"
-    height="auto"
-  >
-    <v-layout>
+  
+
       <v-app-bar
         density="compact"
       >
-      <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
+    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       
         <img
       class="mx-2"
@@ -21,53 +15,71 @@
       width="45"
         />
       </router-link>
-     
-        <v-app-bar-title>Adversity Athletes</v-app-bar-title>
 
-        <!-- <template v-slot:append>
-          <v-btn icon="mdi-dots-vertical"></v-btn>
-        </template> -->
-          <!-- <template v-slot:append>
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-          </template> -->
+    <v-toolbar-title>Adversity Athletes Youth Football</v-toolbar-title>
 
-          <v-tabs
-          color="deep-purple-accent-4"
-        >
-        <!-- <router-link :to="{ name: 'About Us' }">
-        </router-link> -->
-        <v-tab :value="1" @click="">About Us</v-tab>
-        <v-tab :value="2">Coaches</v-tab>
-          <!-- <v-tab :value="3">Extra Tab</v-tab> -->
-        </v-tabs>
-      </v-app-bar>
+    <v-spacer></v-spacer>
+    <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn icon="mdi-dots-vertical" v-bind="props"></v-btn>
+            </template>
 
-      <!-- <v-navigation-drawer location="end" v-model="drawer">
-        <v-list-item link title="List Item 1"></v-list-item>
-        <v-list-item link title="List Item 2"></v-list-item>
-       <v-list-item link title="List Item 3"></v-list-item>
-      </v-navigation-drawer> -->
-    </v-layout>
-  </v-card>
-      </v-col>
-    </v-row>
+            <v-list v-model="dropdown">
+              <v-list-item
+                v-for="(item, i) in dropdownItems"
+                :key="i"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+    <v-menu v-model="dropdown" end>
+      <template v-slot:activator="{ on, attrs }">
+        <v-app-bar-nav-icon v-bind="attrs" v-on="on" @click.stop="toggleDropdown"></v-app-bar-nav-icon>
+      </template>
+
+      <v-list>
+        <v-list-item v-for="(item, index) in dropdownItems" :key="index" @click="handleDropdownItemClick(item)">
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </v-app-bar>
   </v-container>
     
 </template>
   <script>
+
   // import logo from '../assets/images/adversity-athletes-logo.jpg'
   export default {
     name:'NavBar',
-    data(){
-      return{
-        drawer:false,
-        buttons:[
-          {home:'Home'},
-          {home:'About Us'},
-          
-        ]
-      }
-    }
+    data() {
+    return {
+      drawer: false,
+      dropdown: false,
+      dropdownItems: [
+        { title: 'Coaches', path: '/coaches' },
+        { title: 'Registration', path: '/registration' },
+        { title: 'Be a Sponsor', path: '/sponsorship' },
+      ],
+    };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
+    toggleDropdown() {
+      this.dropdown = !this.dropdown;
+    },
+    handleDropdownItemClick(item) {
+      // Handle the dropdown item click
+      console.log(`Clicked on ${item.title}`);
+      this.$router.push({path: item.path})
+      // You can add your logic here
+      this.dropdown = false; // Close the dropdown after clicking
+    },
+  },
   }
   
   </script>
