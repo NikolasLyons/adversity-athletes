@@ -17,6 +17,12 @@
         </div>
         </v-card>
       </v-col>
+      <v-col>
+        <a href="https://account.venmo.com/u/AA_YFootball" target="_blank">
+
+          <v-btn >CLick Here to donate</v-btn>
+        </a>
+      </v-col>
     </v-row>
   </container>
 </template>
@@ -71,6 +77,11 @@ export default{
       },
     ]
 
+    }
+  },
+  methods: {
+    goToAnotherWebsite() {
+      this.$router.push('https://account.venmo.com/u/AA_YFootball'); // Replace with the URL of the other website
     }
   }
 }

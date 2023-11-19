@@ -15,9 +15,7 @@ registerGlobalComponents(root)
 
 
 root
-  .use(vuetify, {
-    iconfont: 'mdi'
-  })
+  .use(vuetify)
   .use(router)
   .mount('#app')
 
