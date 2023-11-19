@@ -81,7 +81,7 @@ export default{
   },
   methods: {
     goToAnotherWebsite() {
-      this.$router.push('https://account.venmo.com/u/AA_YFootball'); // Replace with the URL of the other website
+      // this.$router.push('https://account.venmo.com/u/AA_YFootball'); // Replace with the URL of the other website
     }
   }
 }

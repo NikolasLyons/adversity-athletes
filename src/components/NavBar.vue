@@ -57,7 +57,7 @@
     handleDropdownItemClick(item) {
       // Handle the dropdown item click
       console.log(`Clicked on ${item.title}`);
-      this.$router.push({path: item.path})
+      // this.$router.push({path: item.path})
       // You can add your logic here
       this.dropdown = false; // Close the dropdown after clicking
     },
