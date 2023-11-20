@@ -30,7 +30,7 @@
 
     <v-row justify="center">
       <v-col class="text-center" cols="12">
-        <span>&copy; 2023 Your Company. All rights reserved.</span>
+        <span>&copy; 2023 Adversity Athletes Football. All rights reserved.</span>
       </v-col>
     </v-row>
   </v-footer>
