@@ -1,29 +1,39 @@
 <template>
   <container>
-    <h1>Sponsorship Levels:</h1>
-    <v-row>
-      <v-col v-for="(item, index) in tiers" :key="index" cols="6">
-        <v-card heigh="400" :color="item.color">
+    <div class="mt-5">
+      <v-card class="pt-5">
+        <v-card-title>Our Mission:</v-card-title>
+        <v-card-content class="p-4">
           <div class="ma-5">
-            <v-card-title class="text-h5">
-                 {{ item.tier }}: {{ item.price }}
-                </v-card-title>
-                <!-- <h3>{{ item.price }}</h3> -->
-          <ul>
-            <li v-for="(description,index) in item.description" :key="index">
-              {{ description.item }}
-            </li>
-          </ul>
-        </div>
-        </v-card>
-      </v-col>
-      <v-col>
-        <a href="https://account.venmo.com/u/AA_YFootball" target="_blank">
-
-          <v-btn >CLick Here to donate</v-btn>
-        </a>
-      </v-col>
-    </v-row>
+            <p>At Adversity Athletes youth football, our mission is to foster a culture of growth, teamwork, and sportsmanship within our youth tackle football program. We are dedicated to providing a safe and supportive environment where young athletes can develop not only as skilled football players but also as individuals with character, integrity, and resilience. Our goal is to instill a passion for the game while emphasizing the importance of discipline, hard work, and respect both on and off the field. Through expert coaching, positive mentorship, and a commitment to each player's holistic development, we aim to cultivate a sense of community within our team, empowering our young athletes to face challenges with confidence and determination. We believe that football is not just a sport; it's a platform for building lifelong skills and creating lasting memories.</p>
+          </div>
+        </v-card-content>
+      </v-card>
+      <h1>Sponsorship Levels:</h1>
+      <v-row>
+        <v-col v-for="(item, index) in tiers" :key="index" cols="6">
+          <v-card heigh="400" :color="item.color">
+            <div class="ma-5">
+              <v-card-title class="text-h5">
+                   {{ item.tier }}: {{ item.price }}
+                  </v-card-title>
+                  <!-- <h3>{{ item.price }}</h3> -->
+            <ul>
+              <li v-for="(description,index) in item.description" :key="index">
+                {{ description.item }}
+              </li>
+            </ul>
+          </div>
+          </v-card>
+        </v-col>
+        <v-col>
+          <a href="https://account.venmo.com/u/AA_YFootball" target="_blank">
+  
+            <v-btn >CLick Here to donate</v-btn>
+          </a>
+        </v-col>
+      </v-row>
+    </div>
   </container>
 </template>
 <script>

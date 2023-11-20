@@ -68,7 +68,7 @@
       dropdown: false,
       dropdownItems: [
         { title: 'Coaches', path: '/coaches' },
-        { title: 'Registration', path: '/registration' },
+        // { title: 'Registration', path: '/registration' },
         { title: 'Be a Sponsor', path: '/sponsorship' },
       ],
     };
