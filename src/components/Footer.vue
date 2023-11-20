@@ -51,5 +51,8 @@ export default {
 </script>
 
 <style scoped>
+v-footer{
+  background-color: #7c9cd3;
+}
 /* Add your custom styles here if needed */
 </style>

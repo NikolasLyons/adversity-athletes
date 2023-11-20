@@ -1,11 +1,33 @@
 
 <template>
-  <v-container>
-  
 
-      <v-app-bar
-        density="compact"
-      >
+<v-app-bar app>
+  <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
+      <img
+    class="mx-2"
+    src="../assets/adversity-athletes-logo.jpg"
+    height="45"
+    width="45"
+      />
+    </router-link>
+
+  <v-toolbar-title>Adversity Athletes Youth Football</v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+  
+    <v-menu v-model="dropdown" location="bottom">
+      <template v-slot:activator="{ on, attrs }">
+        <v-app-bar-nav-icon v-bind="attrs" v-on="on" @click.stop="toggleDropdown"></v-app-bar-nav-icon>
+      </template>
+      <v-list>
+        <v-list-item v-for="(item, index) in dropdownItems" :key="index" @click="handleDropdownItemClick(item)">
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+  </v-app-bar>
+      <!-- <v-app-bar app>
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       
         <img
@@ -31,8 +53,8 @@
         </v-list-item>
       </v-list>
     </v-menu>
-  </v-app-bar>
-  </v-container>
+  </v-app-bar> -->
+
     
 </template>
   <script>
@@ -42,6 +64,7 @@
     name:'NavBar',
     data() {
     return {
+      drawer: false,
       dropdown: false,
       dropdownItems: [
         { title: 'Coaches', path: '/coaches' },
@@ -54,8 +77,14 @@
     
   },
   methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
     toggleDropdown() {
       this.dropdown = !this.dropdown;
+    },
+    closeDropdown() {
+      this.dropdown = false;
     },
     handleDropdownItemClick(item) {
       // Handle the dropdown item click

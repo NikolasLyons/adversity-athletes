@@ -13,8 +13,10 @@
       </v-card>
     </v-col>
     <v-col cols="6" class="mt-5">
+      <v-card>
         <h1 class="header">Threads</h1>
-        <img class="cover" height="500"  width="600" src="../assets/concept1.jpeg" alt="jersey-combo"/>
+        <img class="contain" height="500"  width="400" src="../assets/concept1.jpeg" alt="jersey-combo"/>
+      </v-card>
     </v-col>
   </v-row>
   <!-- <img src="../assets/adversity-athletes-logo.jpg" alt=""> -->
@@ -25,4 +27,5 @@
 .header{
   background-color: #7BAFD4;
 }
+
 </style>
