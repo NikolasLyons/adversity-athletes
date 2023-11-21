@@ -11,7 +11,7 @@
       </v-card>
       <h1>Sponsorship Levels:</h1>
       <v-row>
-        <v-col v-for="(item, index) in tiers" :key="index" cols="6">
+        <v-col cols="12" md="6" v-for="(item, index) in tiers" :key="index">
           <v-card height="250" :color="item.color">
             <div class="ma-5">
               <v-card-title class="text-h5">
@@ -26,7 +26,7 @@
           </div>
           </v-card>
         </v-col>
-        <v-col>
+        <v-col class="text-center mb-5">
           <a href="https://account.venmo.com/u/AA_YFootball" target="_blank">
   
             <v-btn >CLick Here to donate</v-btn>

@@ -1,7 +1,12 @@
 <template>
-
-  <v-row class="ma-5">
-    <v-col cols="6">
+  <v-row>
+      <v-col class="header text-center" cols="12">
+        <h1>Welcome!</h1>
+        <p>Full Website coming soon</p>
+      </v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="12" md="6">
       <v-card align="center" height="auto" class="ma-5 flex-column align-item-center text-center">
         <h1 class="header"> News</h1>
         <p>Full Website coming soon Tryout info below ⤵️</p>
@@ -12,14 +17,10 @@
         <p>There is a $10 fee</p>
       </v-card>
     </v-col>
-    <v-col cols="6" class="mt-5">
-      <v-card>
-        <h1 class="header">Threads</h1>
-        <img class="cover" height="500"  width="400" src="../assets/concept1.jpeg" alt="jersey-combo"/>
-      </v-card>
+    <v-col  cols="12" md="6">
+      <img style="max-width: 100%; max-height: 100%;" src="../assets/concept2.jpeg" alt="picture of uniforms"/>
     </v-col>
   </v-row>
-  <!-- <img src="../assets/adversity-athletes-logo.jpg" alt=""> -->
 </template>
 <script>
 </script>

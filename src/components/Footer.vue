@@ -1,5 +1,5 @@
 <template>
-  <v-footer  app>
+  <v-footer class="footer mt-5"  app>
     <v-row justify="center">
       <v-col
         v-for="(icon, index) in socialIcons"
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
-v-footer{
+.footer{
   background-color: #7c9cd3;
 }
 /* Add your custom styles here if needed */
