@@ -12,7 +12,7 @@
       <h1>Sponsorship Levels:</h1>
       <v-row>
         <v-col v-for="(item, index) in tiers" :key="index" cols="6">
-          <v-card heigh="400" :color="item.color">
+          <v-card height="250" :color="item.color">
             <div class="ma-5">
               <v-card-title class="text-h5">
                    {{ item.tier }}: {{ item.price }}
