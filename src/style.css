@@ -21,13 +21,13 @@ v-footer{
 
 
 
-body {
+/* body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 
 
@@ -37,14 +37,7 @@ body {
   
 } */
 
-main{
-  flex-grow: 1;
-}
 
-a{
-  text-decoration: none;
-}
- 
 
 
 
