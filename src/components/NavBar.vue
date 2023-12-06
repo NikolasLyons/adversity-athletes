@@ -5,7 +5,7 @@
   <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <img
     class="mx-2"
-    src="../assets/adversity-athletes-logo.jpg"
+    src="/images/adversity-athletes-logo.jpg"
     height="45"
     width="45"
       />
@@ -14,9 +14,10 @@
   <v-toolbar-title>Adversity Athletes Youth Football</v-toolbar-title>
 
     <v-spacer></v-spacer>
+    <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
   
-    <v-menu v-model="dropdown" location="bottom">
+    <!-- <v-menu v-model="dropdown" location="bottom">
       <template v-slot:activator="{ on, attrs }">
         <v-app-bar-nav-icon v-bind="attrs" v-on="on" @click.stop="toggleDropdown"></v-app-bar-nav-icon>
       </template>
@@ -25,41 +26,26 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-menu>
+    </v-menu> -->
   </v-app-bar>
-      <!-- <v-app-bar app>
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      
-        <img
-      class="mx-2"
-      src="../assets/adversity-athletes-logo.jpg"
-      height="45"
-      width="45"
-        />
-      </router-link>
-
-    <v-toolbar-title>Adversity Athletes Youth Football</v-toolbar-title>
-
-    <v-spacer></v-spacer>
-
-    <v-menu v-model="dropdown"  location="bottom">
-      <template v-slot:activator="{ props }">
-        <v-app-bar-nav-icon v-bind="props"  @click="toggleDropdown"></v-app-bar-nav-icon>
-      </template>
-
-      <v-list>
-        <v-list-item v-for="(item, index) in dropdownItems" :key="index" @click="handleDropdownItemClick(item)">
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-  </v-app-bar> -->
-
-    
+  <v-navigation-drawer
+      v-model="drawer"
+      location="right"
+      temporary
+    >
+      <v-list
+        v-for="(item,index) in dropdownItems"
+        :key="index"
+      >
+      <v-list-item
+            :title="item.title"
+            link :to="item.path"
+          ></v-list-item>
+    </v-list>
+  </v-navigation-drawer> 
 </template>
   <script>
 
-  // import logo from '../assets/images/adversity-athletes-logo.jpg'
   export default {
     name:'NavBar',
     data() {

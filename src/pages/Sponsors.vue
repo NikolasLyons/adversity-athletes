@@ -31,6 +31,7 @@
   
             <v-btn >CLick Here to donate</v-btn>
           </a>
+          <v-banner class="text-center">While awaiting the final approval of our 501(c)(3) application, please note that donations are still eligible to ebe tax-deductible. Please continue to support!</v-banner>
         </v-col>
       </v-row>
     </div>

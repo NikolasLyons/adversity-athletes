@@ -1,0 +1,1 @@
+import{_ as a,r as o,o as r,c as s,w as e,a as t,b as l}from"./index-4a40e9d6.js";const d={};function u(f,p){const c=o("v-card"),n=o("v-col"),_=o("v-row");return r(),s(_,null,{default:e(()=>[t(n,null,{default:e(()=>[t(c,null,{default:e(()=>[l(" hello ")]),_:1})]),_:1})]),_:1})}const v=a(d,[["render",u]]);export{v as default};

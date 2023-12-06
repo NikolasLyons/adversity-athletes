@@ -18,7 +18,7 @@
       </v-card>
     </v-col>
     <v-col  cols="12" md="6">
-      <img style="max-width: 100%; max-height: 100%;" src="../assets/concept2.jpeg" alt="picture of uniforms"/>
+      <img style="max-width: 100%; max-height: 100%;" src="/images/concept2.jpeg" alt="picture of uniforms"/>
     </v-col>
   </v-row>
 </template>
