@@ -17,7 +17,6 @@
               <v-card-title class="text-h5">
                    {{ item.tier }}: {{ item.price }}
                   </v-card-title>
-                  <!-- <h3>{{ item.price }}</h3> -->
             <ul>
               <li v-for="(description,index) in item.description" :key="index">
                 {{ description.item }}
@@ -31,7 +30,7 @@
   
             <v-btn >CLick Here to donate</v-btn>
           </a>
-          <v-banner class="text-center">While awaiting the final approval of our 501(c)(3) application, please note that donations are still eligible to ebe tax-deductible. Please continue to support!</v-banner>
+          <v-banner class="text-center">We are a Non-profit organization and all donations can be written off or tax purposes. We appreciate all the support!</v-banner>
         </v-col>
       </v-row>
     </div>

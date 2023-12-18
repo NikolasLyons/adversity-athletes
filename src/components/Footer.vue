@@ -12,6 +12,7 @@
         <v-btn icon :href="icon.link" target="_blank">
           <v-icon size="24">{{ icon.icon }}</v-icon>
         </v-btn>
+        <p class="text-black">{{ icon.name }}</p>
       </v-col>
     </v-row>
 
@@ -41,9 +42,9 @@ export default {
   data() {
     return {
       socialIcons: [
-        { icon: 'mdi-instagram', link: 'https://www.instagram.com/adversity.athletes.football/' },
-        { icon: 'mdi-facebook', link: 'https://www.facebook.com/' },
-        { icon: ' mdi-venmo', link: 'https://account.venmo.com/u/AA_YFootball' },
+        { icon: 'mdi-instagram',name:'Instagram', link: 'https://www.instagram.com/adversity.athletes.football/' },
+        { icon: 'mdi-facebook', name:'Facebook', link: 'https://www.facebook.com/' },
+        { icon: ' mdi-venmo',name:'Venmo', link: 'https://account.venmo.com/u/AA_YFootball' },
       ],
     };
   },
