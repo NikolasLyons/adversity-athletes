@@ -55,7 +55,6 @@ export default{
         price: '$500',
         color:'#000000',
         description:[
-          {item:'Small logo on Practice jerseys'},
           {item:'Sponsorship shout out 5x on social media'},
           {item:'Sponsor logo on website'}
           ]
@@ -65,7 +64,6 @@ export default{
         price: '$1000',
         color:'#7c9cd3',
         description:[
-          {item:'Medium logo on Practice jerseys'},
           {item:'Logo on Players/ Coaches travel gear'},
           {item:'Athlete of the month sponsorship post on social media(monthly)'},
           {item:'Team photo'},
@@ -77,7 +75,6 @@ export default{
         price: '$2000',
         color:'#E5E4E2',
         description:[
-          {item:'Large logo on Practice jerseys'},
           {item:'Large Logo on Players/ Coaches travel gear'},
           {item:'Banner with logo on it'},
           {item:'Athlete of the week sponsorship post (weekly) on 3 social media platforms'},
