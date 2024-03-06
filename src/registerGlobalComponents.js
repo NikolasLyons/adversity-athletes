@@ -1,3 +1,4 @@
+
 export function registerGlobalComponents(root) {
   // https://webpack.js.org/guides/dependency-management/#require-context
   // @ts-ignore
@@ -9,4 +10,4 @@ export function registerGlobalComponents(root) {
     // Register component on this Vue instance
     root.component(componentName, component.default)
   })
-}
+};

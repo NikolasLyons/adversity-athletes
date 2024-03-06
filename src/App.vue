@@ -1,30 +1,28 @@
 
 <template>
   <v-app class="app">
+    <NavBar />
     <v-main>
-      <NavBar />
-        <router-view></router-view>
-      <Footer />
+      <router-view></router-view>
     </v-main>
+    <Footer />
   </v-app>
 </template>
-  <script>
-  export default {
+<script>
+export default {
   setup() {
     return {};
   },
 };
-  </script>
+</script>
 
 <style  scoped>
-/* .app{
+/* .app {
   background-size: cover;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
- background-color: black;
+  background-color: black;
   background-repeat: no-repeat;
-  background-image: url('public/images/adversity-athletes-logo.jpg');
 } */
 </style>

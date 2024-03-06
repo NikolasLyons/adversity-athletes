@@ -27,6 +27,11 @@ const routes = [
     component: loadPage("Sponsors"),
   },
 
+  {
+    path: "/our-sponsors",
+    name: "OurSponsors",
+    component: loadPage("OurSponsors"),
+  },
 ];
 
 export const router = createRouter({
