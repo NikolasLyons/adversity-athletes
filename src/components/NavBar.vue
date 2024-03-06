@@ -1,4 +1,3 @@
-
 <template>
   <v-app-bar app>
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
@@ -18,6 +17,7 @@
     </v-list>
   </v-navigation-drawer>
 </template>
+
 <script>
 
 export default {
@@ -28,7 +28,7 @@ export default {
       dropdown: false,
       dropdownItems: [
         { title: 'Coaches', path: '/coaches' },
-        { title: 'See Sponsors', path: '/oursponsors' },
+        { title: 'See Sponsors', path: '/our-sponsors' },
         { title: 'Be a Sponsor', path: '/sponsorship' },
       ],
     };
