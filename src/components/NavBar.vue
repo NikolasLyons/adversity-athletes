@@ -4,7 +4,7 @@
       <img class="mx-2" src="/images/adversity-athletes-logo.jpg" height="45" width="45" />
     </router-link>
 
-    <v-toolbar-title>Adversity Athletes Youth Football</v-toolbar-title>
+    <v-toolbar-title v-if="!isMobile">Adversity Athletes Youth Football</v-toolbar-title>
 
     <v-spacer></v-spacer>
     <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -34,7 +34,9 @@ export default {
     };
   },
   computed: {
-
+    isMobile() {
+      return window.screen.width < 600
+    }
   },
   methods: {
     toggleDrawer() {
